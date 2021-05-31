@@ -7,11 +7,10 @@ use PHPUnit\Framework\TestCase;
  */
 final class AvaTaxClientTest extends TestCase
 {
-    /**
-     * @expectedException \Exception
-     */
     public function testConstructorThrowsExceptionForMissingRequirements()
     {
+        $this->expectException(\Exception::class);
+
         new Avalara\AvaTaxClient('', '', '', '');
     }
     
